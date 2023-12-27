@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+*{
+    padding:0;
+    margin: 0;
+    font-family: "Roboto Light",sans-serif;
+}
+
+body{
+    background:linear-gradient(pink,blueviolet);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1{
+    font-size: 35px;
+    margin-top: 100px;
+}
+
+.main{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: row;
+    margin-top: 30px;
+    max-width: 800px;
+}
+.calculator-container{
+    flex:1;
+    box-sizing: border-box;
+    border: 2px solid;
+    padding: 30px;
+    border-radius: 10px;
+    background-color:rgb(20,20,20);
+}
+
+.calculator-container button{
+    width:80px;
+    height:70px;
+    border-radius: 10px;
+    font-size: 25px;
+    margin: 3px;
+    background-color: rgb(50,50,50);
+    color: #fff;
+    border:none;
+    cursor: pointer;
+}
+.calculator-container button:hover, #calculate:hover{
+    background-color: gold;
+    color: #000;
+}
+
+.display-row{
+    height: 130px;
+    max-height: 130px;
+    text-align: right;
+    color:#fff;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 10px 5px 5px 5px;
+}
+.display-row .equation{
+    visibility: hidden;
+    font-size: 25px;
+    color: #fff;
+    margin-top: 40px;
+
+}
+.display-row .input-answer{
+    color: #fff;
+    font-size: 55px;
+}
+.calculator-container .number{
+    background-color: rgb(100, 100, 100);
+}
+.calculator-container .operator, #calculate{
+    background-color: orangered;
+}
+.History{
+    box-sizing: border-box;
+    background-color: #000;
+    color: #fff;
+    font-size: 25px;
+    text-align: center;
+    width: 250px;
+    height: 650px;
+    border-radius: 0 20px 20px 0;
+}
+.History p{
+    margin-top: 20px;
+    text-align: left;
+    margin-left: 15px;
+    font-size: 20px
+}
+.History ul{
+    margin-top: 20px;
+    list-style: none;
+    overflow-y: auto;
+    max-height: 600px;
+    width: 210px;
+}
+
+a >svg{
+    cursor:pointer;
+    width: 30px;
+    height: 30px;
+    float: right;
+}
+
+
+#input-answer{
+    border: none;
+    outline: none;
+    background-color: rgb(20,20,20);
+    color: white;
+    width:20rem ;
+    text-align: right;
+}
+

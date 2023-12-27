@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator with input</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src= 
+"https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.6.4/math.js"
+		integrity= 
+"sha512-BbVEDjbqdN3Eow8+empLMrJlxXRj5nEitiCAK5A1pUr66+jLVejo3PmjIaucRnjlB0P9R3rBUs3g5jXc8ti+fQ=="
+		crossorigin="anonymous"
+		referrerpolicy="no-referrer"></script> 
+</head>
+<body>
+    <h1>Standard calculator with history</h1>
+
+    <div class="main">
+        <div class="calculator-container" id="calculator">
+            <div class="display-row">
+                <a id="show-history"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <path fill="currentColor" d="M12 21q-3.45 0-6.012-2.287T3.05 13H5.1q.35 2.6 2.313 4.3T12 19q2.925 0 4.963-2.037T19 12q0-2.925-2.037-4.962T12
+                    5q-1.725 0-3.225.8T6.25 8H9v2H3V4h2v2.35q1.275-1.6 3.113-2.475T12 3q1.875 0 3.513.713t2.85
+                    1.924q1.212 1.213 1.925 2.85T21 12q0 1.875-.712 3.513t-1.925 2.85q-1.213 1.212-2.85 1.925T12 21m2.8-4.8L11 12.4V7h2v4.6l3.2 3.2z"/></svg>
+                </a>
+                <p class="equation" id="equation">0</p>
+                <input type="text" class="input-answer" id="input-answer">
+            </div>
+            <div class="button-row">
+
+                <button id="clearALL">AC</button>
+                <button id="clear">C</button>
+                <button id="delete">DEL</button>
+                <button class="operator">%</button>
+            </div>
+            <div class="button-row">
+                <button id="square">x²</button>
+                <button id="squareRoot">√</button>
+                <button id="positiveNegative">+/-</button>
+                <button class="operator">÷</button>
+            </div>
+            <div class="button-row">
+                <button class="number" onkeydown="myFunction(event)">7</button>
+                <button class="number" onkeydown="myFunction(event)">8</button>
+                <button class="number" onkeydown="myFunction(event)">9</button>
+                <button class="operator" onkeydown="myFunction(event)">x</button>
+            </div>
+            <div class="button-row">
+                <button class="number" onkeydown="myFunction(event)">4</button>
+                <button class="number" onkeydown="myFunction(event)">5</button>
+                <button class="number" onkeydown="myFunction(event)">6</button>
+                <button class="operator" onkeydown="myFunction(event)">-</button>
+            </div>
+            <div class="button-row">
+                <button class="number" onkeydown="myFunction(event)">1</button>
+                <button class="number" onkeydown="myFunction(event)">2</button>
+                <button class="number" onkeydown="myFunction(event)">3</button>
+                <button class="operator" onkeydown="myFunction(event)">+</button>
+            </div>
+            <div class="button-row">
+                <button class="number" id="doubleZero">00</button>
+                <button class="number" id="zero" onkeydown="myFunction(event)">0</button>
+                <button class="number" id="decimal">.</button>
+                <button class="number" id="calculate">=</button>
+            </div>
+        </div>
+        <!---history part--->
+        <div class="History">
+            <p>History:</p>
+            <ul>
+            </ul>
+        </div>
+
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
